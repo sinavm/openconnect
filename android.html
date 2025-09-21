@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل کانال تلگرامی SiNAVM</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+    body {
+      text-align: center;
+      font-family: 'Vazirmatn', Arial, sans-serif;
+      direction: rtl;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      max-width: 80px;
+      margin-left: 10px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    }
+    .header {
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .header a { text-decoration: none; color: #ffcc00; }
+    .header a:hover { text-decoration: underline; color: #ffd700; }
+
+    /* استایل جعبه آموزش */
+    .tutorial-box {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: right;
+    }
+    .tutorial-box h1 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #2a5298;
+      text-align: center;
+    }
+    .tutorial-box .lead {
+      margin-bottom: 15px;
+      text-align: right;
+    }
+    .tutorial-box a.button {
+      display: inline-block;
+      background: #0073e6;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+    figure {
+      background: #fafafa;
+      padding: 8px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    figcaption {
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+    .step {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+    .step h3 {
+      margin-bottom: 10px;
+      color: #2a5298;
+    }
+
+    .software-links {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    .telegram-box {
+      background: #0088cc;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      text-decoration: none;
+      margin: 15px auto;
+      box-shadow: 0px 4px 10px rgba(0, 136, 204, 0.5);
+    }
+    .telegram-box img {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+    .visit-container {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .visit-box {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <img class="logo" src="https://github.com/sinavm/sinavm/raw/refs/heads/main/IMG_7428.jpeg" alt="Logo">
+    <div class="header">
+      پنل اختصاصی  
+      <a href="https://T.me/sinavm" target="_blank">SiNAVM</a>
+    </div>
+  </div>
+
+  <!-- پست‌های تلگرام -->
+  <div id="telegram-posts">
+    <p>در حال بارگذاری پست‌ها...</p>
+  </div>
+
+  <!-- بخش آموزش و دانلود برنامه -->
+  <div class="tutorial-box">
+    <h1>آموزش نصب و استفاده از Open Connect برای اندروید</h1>
+    <p class="lead">ابتدا نرم‌افزار <strong>Open Connect</strong> را از لینک زیر دانلود و نصب کنید:</p>
+    <p style="text-align:center;">
+      <a class="button" href="https://play.google.com/store/apps/details?id=xyz.opcx.mph&hl=en" target="_blank" rel="noopener">دانلود Open Connect اندروید</a>
+    </p>
+
+    <h3>مراحل نصب و اتصال:</h3>
+    <p>طبق تصاویر زیر عمل کنید:</p>
+    <div class="gallery">
+      <figure>
+        <img src="https://raw.githubusercontent.com/sinavm/openconnect/main/image/android/1.jpeg" alt="مرحله ۱">
+        <figcaption>انتخاب add</figcaption>
+      </figure>
+      <figure>
+        <img src="https://github.com/sinavm/openconnect/image/android/openconnect_android_2.jpeg" alt="مرحله ۲">
+        <figcaption>وارد کردن آدرس سرور</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/sinavm/openconnect/main/image/android/3.jpeg" alt="مرحله ۳">
+        <figcaption>وارد کردن آدرس سرور</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/sinavm/openconnect/main/image/android/4.jpeg" alt="مرحله ۴">
+        <figcaption>فعال کردن کانکشن</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/sinavm/openconnect/main/image/android/5.jpeg" alt="مرحله ۵">
+        <figcaption>درخواست یوزرنیم و پسورد</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/sinavm/openconnect/main/image/android/6.jpeg" alt="مرحله ۶">
+        <figcaption>نمایش وضعیت اتصال</figcaption>
+      </figure>
+    </div>
+
+    <!-- نکات پایانی -->
+    <div class="step">
+      <h3>۲. نکات پایانی</h3>
+      <p>یوزرنیم و پسور را از کانال تلگرام می‌توانید دریافت کنید: <strong><a href="https://t.me/sinavm" target="_blank">t.me/sinavm</a></strong></p>
+    </div>
+  </div>
+
+  <div class="software-links">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png" width="24">
+    <a href="https://T.me/SinaVM" style="text-decoration: none; color: #0088cc;">کانال تلگرام رو دنبال کن</a>
+  </div>
+    
+  <div class="visit-container">
+    <a class="telegram-box" href="https://T.me/sinavm" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram Logo">
+      کانال تلگرام
+    </a>
+    <div class="visit-box">
+      بازدید شما: <span id="user-visit-count">0</span>
+    </div>
+    <div class="visit-box">
+      بازدید کل: <span id="total-visit-count">...</span>
+    </div>
+  </div>
+
+  <script>
+    // شمارش بازدید
+    let visits = localStorage.getItem("visitCount") || 0;
+    visits++;
+    localStorage.setItem("visitCount", visits);
+    document.getElementById("user-visit-count").innerText = visits;
+
+    fetch('https://page-views.count1.workers.dev')
+      .then(response => response.text())
+      .then(data => {
+        let countElement = document.getElementById("total-visit-count");
+        if (countElement) {
+          countElement.innerText = data;
+        }
+      })
+      .catch(error => console.error("Error fetching total visit count:", error));
+
+    // بارگذاری پست‌های تلگرام
+    document.addEventListener("DOMContentLoaded", () => {
+      let telegramPosts = document.getElementById('telegram-posts');
+      fetch('telegram-posts.html')
+        .then(response => response.text())
+        .then(data => {
+          telegramPosts.innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error loading Telegram posts:', error);
+          telegramPosts.innerHTML = '<p>خطا در بارگذاری پست‌ها</p>';
+        });
+    });
+  </script>
+</body>
+</html>

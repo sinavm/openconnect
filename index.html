@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورود به Open Connect - SiNAVM</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazirmatn', Arial, sans-serif;
+  text-align: center;
+  direction: rtl;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Canvas ذرات */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 40px rgba(255,255,255,0.3), 0 0 80px rgba(0,255,255,0.2);
+  margin-bottom: 15px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 0 60px rgba(0,255,255,0.6), 0 0 100px rgba(0,255,255,0.3);
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffcc00;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* متن بالای دکمه‌ها */
+.subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin: 15px 0 25px 0;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 10px; /* فاصله کمتر از بالا */
+}
+
+.entry-button {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: dropIn 1s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.entry-button.android {
+  background: linear-gradient(135deg, #34a853, #0f9d58);
+  animation-delay: 0.2s;
+}
+
+.entry-button.ios {
+  background: linear-gradient(135deg, #007aff, #0040ff);
+  animation-delay: 0.5s;
+}
+
+.entry-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+@keyframes dropIn {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.visit-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+}
+
+.visit-box {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  width: 130px;
+}
+
+.telegram-box {
+  background: #0088cc;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  box-shadow: 0 4px 20px rgba(0,136,204,0.5);
+  text-decoration: none;
+}
+
+.telegram-box img {
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="header-container">
+  <img class="logo" src="https://github.com/sinavm/sinavm/raw/refs/heads/main/IMG_7428.jpeg" alt="Logo">
+  <div class="header">کانال تلگرامی <a href="https://T.me/sinavm" target="_blank">SiNAVM</a></div>
+</div>
+
+<div class="subtitle">آموزش استفاده از سرورهای OpenConnect</div>
+
+<div class="button-container">
+  <a class="entry-button android" href="https://github.com/sinavm/openconnect/android.html" target="_blank">اندروید</a>
+  <a class="entry-button ios" href="https://github.com/sinavm/openconnect/ios.html" target="_blank">آیفون</a>
+</div>
+
+<div class="visit-container">
+  <a class="telegram-box" href="https://T.me/sinavm" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram Logo">
+    کانال تلگرام
+  </a>
+  <div class="visit-box">بازدید شما: <span id="user-visit-count">0</span></div>
+  <div class="visit-box">بازدید کل: <span id="total-visit-count">...</span></div>
+</div>
+
+<script>
+// شمارش بازدید
+let visits = localStorage.getItem("visitCount") || 0;
+visits++;
+localStorage.setItem("visitCount", visits);
+document.getElementById("user-visit-count").innerText = visits;
+
+fetch('https://page-views.count1.workers.dev')
+.then(response => response.text())
+.then(data => {
+  let countElement = document.getElementById("total-visit-count");
+  if (countElement) countElement.innerText = data;
+})
+.catch(error => console.error("Error fetching total visit count:", error));
+
+// Particles.js ساده
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let w, h;
+function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+window.addEventListener('resize', resize);
+resize();
+
+const particles = [];
+for(let i=0;i<80;i++){
+  particles.push({
+    x: Math.random()*w,
+    y: Math.random()*h,
+    r: Math.random()*3+1,
+    dx: (Math.random()-0.5)*0.5,
+    dy: (Math.random()-0.5)*0.5
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,w,h);
+  particles.forEach(p=>{
+    p.x+=p.dx; p.y+=p.dy;
+    if(p.x<0||p.x>w)p.dx*=-1;
+    if(p.y<0||p.y>h)p.dy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,0.3)';
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
